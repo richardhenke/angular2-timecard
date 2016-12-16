@@ -1,0 +1,14 @@
+<main (click)="getUpdate()">
+	<h1>Time Card Calculator</h1>
+	<label name="timeIn">Start Time: </label>
+	<!--<div class="time" (click)="advanceHour()">{{ [startTime].toString(): }}</div>-->
+	<!--<div class="time" (click)="advanceMinute()">{{ [startTime.minute].toString() }}</div>-->
+	<div class="time" >{{ timeStringToNumber(startTime) }}</div>
+	
+
+	<label name="timeOut">End Time: </label>
+	<input name="timeOut" type="time" [(ngModel)]="endTime">
+	<label name="totalTimeWorked">Time Worked: </label>
+	<!--<input type="text" [(ngModel)]="totalTimeWorked">-->
+	<div>{{ totalTimeWorked.hours + ":" + totalTimeWorked.minutes + ":" + totalTimeWorked.seconds }}</div>
+</main>
